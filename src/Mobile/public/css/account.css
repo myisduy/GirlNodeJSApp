@@ -1,0 +1,144 @@
+/* account  #f6be31 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    width: 100vw;
+    height: 100vh;
+}
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Roboto", "Inter", "Segoe UI", "Helvetica Neue", "sans-serif";
+}
+
+h1.logo {
+    display: flex;
+    width: 100px;
+    margin: 100px auto 50px auto;
+
+}
+h1 img {
+    width: 100%;
+    height: auto;
+}
+.login-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 20px 0;
+}
+.login-container h1{
+    /* margin-bottom: 20px; */
+}
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-form .form-group {
+    width: 90%;
+    margin-bottom: 20px;
+    position: relative;
+}
+.login-form .form-group .input-container {
+    position: relative;
+    width: 100%;
+    border: 1px solid #38b6ff;
+    display: flex;
+
+}
+.login-form .form-group label {
+    display: inline-block;
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    padding: 0 2px;
+    color: #38b6ff;
+    translate: 8px -13px;
+    /* opacity: 0; */
+    position: absolute;
+    pointer-events: none;
+
+}
+.login-form .form-group .input-container input {
+    display: block;
+    /* width: 100%; */
+    padding: 15px;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    outline: none;
+    color: #333;
+    border: none;
+    flex: 1;
+}
+.login-form .form-group input:focus {
+    border-color: #38b6ff;
+}
+.login-form .form-group input:focus + label {
+    display: inline-block;
+    color: #38b6ff;
+    /* translate: 10px -50px; */
+    opacity: 1;
+    
+}
+.login-form .form-group input::placeholder {
+    font-style: italic;
+    color: #999;
+    transition: color 0.3s ease;
+}
+.login-form .form-group input:focus::placeholder {
+    color: transparent
+}
+.login-form .form-group .show-pass {
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    cursor: pointer;
+}
+.login-form .submit {
+    width: 100%;
+    padding: 15px;
+    font-size: 0.8rem;
+    background-color: #38b6ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.login-form .forgot {
+    display: block;
+    margin-top: 10px;
+    color: #38b6ff;
+    text-decoration: none;
+
+}
+div.register-link {
+    width: 90%;
+    text-align: center;
+    margin-top: 20px;
+}
+.register-link a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+.register-link button.register {
+    width: 100%;
+    padding: 15px;
+    font-size: 0.8rem;
+    background-color: #e6e6e6;
+    color: #38b6ff;
+    border: 1px solid #38b6ff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
