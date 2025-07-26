@@ -22,5 +22,6 @@ app.set("views", path.join(__dirname, "app", "views"));
 app.use(express.static(path.join(__dirname, "public", "css")));
 app.use(express.static(path.join(__dirname, "public", 'js')));
 app.use(express.static(path.join(__dirname, "public", "images")));
+// app.use('/fontend', express.static(path.join(__dirname, "public", "fontends")));
 route(app);
 module.exports = app;
