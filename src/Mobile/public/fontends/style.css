@@ -1,0 +1,49 @@
+:root {
+    --primary-color: #b8004c;
+    --secondary-color: #ea2b7b;
+    --text-color: #333;
+    --font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', sans-serif;
+}
+
+* {
+    box-sizing: inherit;
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    background-color: #f0f0f0;
+}
+
+.girl {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.girl__full-width {
+    width: 100%;
+    max-width: 100%;
+
+}
+.girl__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    height: 120px;
+    background-image: linear-gradient(0, var(--primary-color), var(--secondary-color));
+}
+
+
+
+.header__navbar-list {
+    list-style: none;
+
+}
+.header__navbar-item {
+    display: inline-block;
+}
