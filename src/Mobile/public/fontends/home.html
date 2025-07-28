@@ -15,9 +15,13 @@
   </head>
   <body>
     <div id="app" class="app">
+      <div id="overlay" class="overlay"></div>
       <header id="header" class="header">
         <div class="inner">
           <div class="header__logo">
+            <button id="menu-button" class="header__menu-button">
+              <i data-lucide="menu"></i>
+            </button>
             <a href="#" class="header__logo-link">
               <img
                 src="images/logo-2-v-crop.png"
@@ -92,6 +96,22 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       lucide.createIcons();
+    </script>
+    <script>
+        const navbarList = document.querySelector(".header__navbar-list");
+        const overlay = document.getElementById("overlay");
+      document
+        .getElementById("menu-button")
+        .addEventListener("click", function () {
+          navbarList.classList.toggle("active");
+            overlay.style.display = navbarList.classList.contains("active")
+                ? "block"
+                : "none";
+        });
+        overlay.addEventListener("click", function () {
+          navbarList.classList.remove("active");
+          this.style.display = "none";
+        });
     </script>
   </body>
 </html>
