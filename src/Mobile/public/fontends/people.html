@@ -33,9 +33,7 @@
           <nav class="header__navbar">
             <div class="header__navbar-list">
               <div class="header__navbar--menu-text">Menu</div>
-              <button class="left">
-                <i data-lucide="chevron-left"></i>
-              </button>
+              <button class="left">&#10094;</button>
               <ul>
                 <li class="header__navbar-item auth-link">
                   <a href="#" class="header__navbar-link">Đăng nhập</a>
@@ -77,9 +75,7 @@
                   <a href="#" class="header__navbar-link">Đánh giá</a>
                 </li>
               </ul>
-              <button class="right">
-                <i data-lucide="chevron-right"></i>
-              </button>
+              <button class="right">&#10095;</button>
             </div>
             <div class="header__navbar-opposite">
               <ul class="">
@@ -104,7 +100,55 @@
       </header>
       <main id="main" class="main">
         <div class="container">
-          
+          <div class="breadcrumbs">
+            <ul
+              class="breadcrumbs__list"
+              itemscope=""
+              itemtype="https://schema.org/BreadcrumbList"
+            >
+              <li class="breadcrumbs__item"><a href="">Miền Bắc</a></li>
+              <li class="breadcrumbs__item"><a href="">Hà Nội</a></li>
+              <li class="breadcrumbs__item"><a href="">Cầu Giấy</a></li>
+              <li class="breadcrumbs__item"><a href="">Nguyễn Phong Sắc</a></li>
+            </ul>
+          </div>
+          <div class="heading">
+            <h1 class="heading__title">Nguyễn Thị A</h1>
+          </div>
+          <div class="photo-gallery">
+            
+<div class="slideshow-container">
+  <div class="slide fade">
+    <img src="images/people/anh-gai-xinh-2.webp" alt="Slide 1">
+  </div>
+  <div class="slide fade">
+    <img src="images/people/anh-gai-xinh.webp" alt="Slide 2">
+  </div>
+  <div class="slide fade">
+    <img src="images/people/gai-xinh-mac-bikini-14.webp" alt="Slide 3">
+  </div>
+
+  <!-- Nút điều hướng -->
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+
+<!-- Dots -->
+<div class="dots-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+
+
+
+          </div>
+          <p>Welcome to the home page!</p>
+          <p>
+            This is a simple example of a static HTML page with a header and
+            main content area.
+          </p>
         </div>
       </main>
       <footer id="footer" class="footer">
