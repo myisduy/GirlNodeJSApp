@@ -1,17 +1,26 @@
-const express = require('express');
-const path = require('path');
+const express = require("express");
+const handlebars = require("express-handlebars");
+const path = require("path");
+const pg = require("./config/db");
+const route = require("./routes");
+//http logger
+//app.use(morgan('combined'));
+
 const app = express();
 
-// Import hai app con
-const mobileApp = require('./Mobile/app');
-const desktopApp = require('./Desktop/app');
-app.use((req, res, next) => {
-  if (req.hostname.startsWith('m.') || req.hostname.startsWith('mobile.')) {
-    return mobileApp(req, res, next); // chuyển sang app mobile
-  } else {
-    return desktopApp(req, res, next); // chuyển sang app desktop 
-  }
-});
-
+// Set up Handlebars view engine
+app.engine(
+  "view",
+  handlebars.engine({
+    extname: ".view",
+}));
+app.set("view engine", "view");
+app.set("views", path.join(__dirname, "app", "views"));
+app.use(express.static(path.join(__dirname, "public", "css")));
+app.use(express.static(path.join(__dirname, "public", 'js')));
+app.use(express.static(path.join(__dirname, "public", "images")));
+ app.use('/fontend', express.static(path.join(__dirname, "public", "fontends")));
+route(app);
 const PORT = 3000;
+
 app.listen(PORT, () => console.log(`✅ Main app listening on  http://localhost:${PORT}`));

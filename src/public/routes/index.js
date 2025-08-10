@@ -5,7 +5,7 @@ function route(app) {
     
     app.use('/', require('./home'));
     app.use((req, res) => {
-    res.status(404).render('desktop/404', {
+    res.status(404).render('404', {
         url: req.originalUrl
     });
 });
